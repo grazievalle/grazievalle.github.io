@@ -2,38 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Blog Archive</title>
+    <title>My Blog</title>
+    <style>
+        body {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        p {
+            color: #666;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .date {
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        footer {
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+            color: #777;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>My Personal Blog</h1>
-        <p>A collection of my thoughts and projects.</p>
-    </header>
 
-    <main>
-        <section id="blog-list">
-            <h2>Latest Posts</h2>
-            <!-- Unordered list to organize blog entries -->
-            <ul>
-                <li>
-                    <a href="/blogs/post1.html">Understanding HTML Basics for Bloggers</a> 
-                    <span>- June 1, 2026</span>
-                </li>
-                <li>
-                    <a href="/blogs/post2.html">How to Style Your Blog with CSS</a> 
-                    <span>- May 15, 2026</span>
-                </li>
-                <li>
-                    <a href="/blogs/post3.html">10 Tips for Better Web Design</a> 
-                    <span>- April 28, 2026</span>
-                </li>
-            </ul>
-        </section>
-    </main>
+    <h1>My Personal Blog</h1>
+    <p>Thoughts, projects, and notes.</p>
+
+    <h2>Posts</h2>
+
+    <ul>
+        <li>
+            <a href="blogs/post1.html">Understanding HTML Basics for Bloggers</a>
+            <span class="date">— June 1, 2026</span>
+        </li>
+
+        <li>
+            <a href="blogs/post2.html">How to Style Your Blog with CSS</a>
+            <span class="date">— May 15, 2026</span>
+        </li>
+
+        <li>
+            <a href="blogs/post3.html">10 Tips for Better Web Design</a>
+            <span class="date">— April 28, 2026</span>
+        </li>
+    </ul>
 
     <footer>
-        <p>&copy; 2026 My Personal Blog | Follow me on social media</p>
+        © 2026 My Blog
     </footer>
+
 </body>
 </html>
