@@ -1,83 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Blog</title>
-    <style>
-        body {
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 0 20px;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rushikesh AI Blog</title>
 
-        h1 {
-            margin-bottom: 5px;
-        }
+<style>
+:root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --border: #30363d;
+}
 
-        p {
-            color: #666;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+body {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inter, system-ui, sans-serif;
+    line-height: 1.7;
+}
 
-        li {
-            margin-bottom: 12px;
-        }
+header {
+    margin-bottom: 50px;
+}
 
-        a {
-            color: #0366d6;
-            text-decoration: none;
-        }
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+.subtitle {
+    color: var(--muted);
+}
 
-        .date {
-            color: #777;
-            font-size: 0.9em;
-        }
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
 
-        footer {
-            margin-top: 40px;
-            border-top: 1px solid #ddd;
-            padding-top: 15px;
-            color: #777;
-            font-size: 0.9em;
-        }
-    </style>
+.post-list {
+    list-style: none;
+}
+
+.post {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.post a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.post a:hover {
+    color: var(--accent);
+}
+
+.date {
+    display: block;
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 3px 8px;
+    background: rgba(88,166,255,.15);
+    color: var(--accent);
+    border-radius: 5px;
+    font-size: 0.75rem;
+}
+
+footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+</style>
 </head>
 <body>
 
-    <h1>My Personal Blog</h1>
-    <p>Thoughts, projects, and notes.</p>
+<header>
+    <h1>Rushikesh AI Blog</h1>
+    <p class="subtitle">
+        Building AI agents, machine learning projects, MLOps workflows, and software engineering experiments.
+    </p>
+</header>
 
-    <h2>Posts</h2>
+<main>
+    <h2>Latest Posts</h2>
 
-    <ul>
-        <li>
-            <a href="blogs/post1.html">Understanding HTML Basics for Bloggers</a>
-            <span class="date">— June 1, 2026</span>
+    <ul class="post-list">
+
+        <li class="post">
+            <a href="blogs/rag-from-scratch.html">
+                Building a RAG Pipeline from Scratch
+            </a>
+            <span class="date">June 2026</span>
+            <span class="tag">LLM</span>
         </li>
 
-        <li>
-            <a href="blogs/post2.html">How to Style Your Blog with CSS</a>
-            <span class="date">— May 15, 2026</span>
+        <li class="post">
+            <a href="blogs/multi-agent-systems.html">
+                Multi-Agent Systems with LangGraph
+            </a>
+            <span class="date">May 2026</span>
+            <span class="tag">AI Agents</span>
         </li>
 
-        <li>
-            <a href="blogs/post3.html">10 Tips for Better Web Design</a>
-            <span class="date">— April 28, 2026</span>
+        <li class="post">
+            <a href="blogs/self-driving-ppo.html">
+                Self-Driving Car using PPO Reinforcement Learning
+            </a>
+            <span class="date">April 2026</span>
+            <span class="tag">Reinforcement Learning</span>
         </li>
+
+        <li class="post">
+            <a href="blogs/pneumonia-detection.html">
+                Pneumonia Detection with Deep Learning
+            </a>
+            <span class="date">March 2026</span>
+            <span class="tag">Computer Vision</span>
+        </li>
+
     </ul>
+</main>
 
-    <footer>
-        © 2026 My Blog
-    </footer>
+<footer>
+    © 2026 Rushikesh Mohalkar • AI Engineer • Built with GitHub Pages
+</footer>
 
 </body>
 </html>
