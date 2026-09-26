@@ -1,160 +1,88 @@
-<!DOCTYPE html>
+---
+---
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rushikesh AI Blog</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ site.title }}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Rushikesh Mohalkar, home">Rushikesh Mohalkar</a>
+        <nav class="social-links" aria-label="Social links">
+          <a href="https://github.com/mohalkarushikesh">GitHub</a>
+          <a href="https://www.linkedin.com/in/rushikesh-mohalkar">LinkedIn</a>
+          <a href="https://x.com/mohalkrushikesh">X</a>
+        </nav>
+      </header>
 
-<style>
-:root {
-    --bg: #ffffff;
-    --card: #ffffff;
-    --text: #222222;
-    --muted: #666666;
-    --accent: #2563eb;
-    --border: #e5e7eb;
-}
+      <main id="main">
+        <section class="hero" aria-labelledby="intro-title">
+          <p class="eyebrow">AI / MACHINE LEARNING <span aria-hidden="true">·</span> BENGALURU, INDIA</p>
+          <h1 id="intro-title">Rushikesh<br class="desktop-break"> Mohalkar</h1>
+          <p class="role">AI/ML Engineer</p>
+          <p class="intro-copy">Working across large language models, agentic systems, deep learning and production machine-learning pipelines.</p>
+          <div class="hero-links">
+            <a class="text-link" href="https://mohalkarushikesh.github.io/resume/Resume.pdf">Résumé <span aria-hidden="true">&rarr;</span></a>
+            <a class="text-link" href="mailto:rushikeshmohalkar2001@gmail.com">Email <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </section>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        <section class="focus section-rule" aria-labelledby="focus-title">
+          <h2 id="focus-title">Technical focus</h2>
+          <p>Deep Learning <span aria-hidden="true">·</span> Generative AI <span aria-hidden="true">·</span> LLMs <span aria-hidden="true">·</span> RAG <span aria-hidden="true">·</span> AI Agents <span aria-hidden="true">·</span> NLP <span aria-hidden="true">·</span> Reinforcement Learning <span aria-hidden="true">·</span> ML Systems</p>
+        </section>
 
-body {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 50px 20px;
-    background: var(--bg);
-    color: var(--text);
-    font-family: Inter, system-ui, sans-serif;
-    line-height: 1.7;
-}
+        <section class="work section-rule" aria-labelledby="work-title">
+          <div class="section-heading">
+            <h2 id="work-title">Selected work</h2>
+            <span class="work-count" aria-hidden="true">01 — 03</span>
+          </div>
+          <ul class="project-list">
+            <li class="project-row">
+              <h3><a href="https://github.com/mohalkarushikesh/Oryza">Oryza</a></h3>
+              <p>Self-hosted chat with Qwen running locally through Ollama.</p>
+              <a class="project-link" href="https://github.com/mohalkarushikesh/Oryza" aria-label="Oryza on GitHub">GitHub <span aria-hidden="true">&rarr;</span></a>
+            </li>
+            <li class="project-row">
+              <h3><a href="https://github.com/mohalkarushikesh/RAG-app">RAG App</a></h3>
+              <p>Offline PDF question answering with hybrid search and extractive answers.</p>
+              <a class="project-link" href="https://github.com/mohalkarushikesh/RAG-app" aria-label="RAG App on GitHub">GitHub <span aria-hidden="true">&rarr;</span></a>
+            </li>
+            <li class="project-row">
+              <h3><a href="https://github.com/mohalkarushikesh/Vahtuk-Policia">Traffic Vision</a></h3>
+              <p>YOLOv8 and ByteTrack pipeline for traffic-violation detection.</p>
+              <a class="project-link" href="https://github.com/mohalkarushikesh/Vahtuk-Policia" aria-label="Traffic Vision on GitHub">GitHub <span aria-hidden="true">&rarr;</span></a>
+            </li>
+          </ul>
+        </section>
+      </main>
 
-header {
-    margin-bottom: 50px;
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    color: var(--muted);
-}
-
-h2 {
-    margin-bottom: 20px;
-    font-size: 1.3rem;
-}
-
-.post-list {
-    list-style: none;
-}
-
-.post {
-    padding: 18px 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.post a {
-    color: var(--text);
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-.post a:hover {
-    color: var(--accent);
-}
-
-.date {
-    display: block;
-    margin-top: 5px;
-    color: var(--muted);
-    font-size: 0.9rem;
-}
-
-.tag {
-    display: inline-block;
-    margin-top: 8px;
-    padding: 3px 8px;
-    background: rgba(88,166,255,.15);
-    color: var(--accent);
-    border-radius: 5px;
-    font-size: 0.75rem;
-}
-
-footer {
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border);
-    color: var(--muted);
-    font-size: 0.9rem;
-}
-</style>
-</head>
-<body>
-
-<header>
-    <h1>Rushikesh AI Blog</h1>
-    <p class="subtitle">
-        Building AI agents, machine learning projects, MLOps workflows, and software engineering experiments.
-    </p>
-</header>
-
-<main>
-    <h2>Latest Posts</h2>
-
-    <ul class="post-list">
-
-        <li class="post">
-            <a href="blogs/my-ai-journey.html">
-                My Journey into Artificial Intelligence
-            </a>
-            <span class="date">June 2026</span>
-            <span class="tag">Overview</span>
-        </li>
-
-        <li class="post">
-            <a href="blogs/rag-from-scratch.html">
-                Building a RAG Pipeline from Scratch
-            </a>
-            <span class="date">June 2026</span>
-            <span class="tag">LLM</span>
-        </li>
-
-        <li class="post">
-            <a href="blogs/multi-agent-systems.html">
-                Multi-Agent Systems with LangGraph
-            </a>
-            <span class="date">May 2026</span>
-            <span class="tag">AI Agents</span>
-        </li>
-
-        <li class="post">
-            <a href="blogs/self-driving-ppo.html">
-                Self-Driving Car using PPO Reinforcement Learning
-            </a>
-            <span class="date">April 2026</span>
-            <span class="tag">Reinforcement Learning</span>
-        </li>
-
-        <li class="post">
-            <a href="blogs/pneumonia-detection.html">
-                Pneumonia Detection with Deep Learning
-            </a>
-            <span class="date">March 2026</span>
-            <span class="tag">Computer Vision</span>
-        </li>
-
-    </ul>
-</main>
-
-<footer>
-    © 2026 Rushikesh Mohalkar • AI Engineer • Built with GitHub Pages
-</footer>
-
-</body>
+      <footer class="site-footer">
+        <p>&copy; 2026 Rushikesh Mohalkar</p>
+        <nav class="footer-links" aria-label="More social links">
+          <a href="https://github.com/mohalkarushikesh">GitHub</a>
+          <a href="https://www.linkedin.com/in/rushikesh-mohalkar">LinkedIn</a>
+          <a href="https://x.com/mohalkrushikesh">X</a>
+          <a href="https://www.instagram.com/mohalkarushikesh">Instagram</a>
+        </nav>
+      </footer>
+    </div>
+  </body>
 </html>
